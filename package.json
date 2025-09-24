@@ -1,0 +1,54 @@
+{
+  "name": "get-hired-server",
+  "version": "1.0.0",
+  "description": "Backend for Get Hired / LinkedIn clone project",
+  "main": "build/app.js",
+  "scripts": {
+    "dev": "nodemon -r tsconfig-paths/register --watch src/**/*.ts --exec ts-node src/app.ts",
+    "build": "tsc",
+    "start": "node build/app.js",
+    "migrate": "dotenv -e .env -- node-pg-migrate -m ./migrations"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vaishali2k11/get-hired-server.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "postgres",
+    "typescript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/vaishali2k11/get-hired-server/issues"
+  },
+  "homepage": "https://github.com/vaishali2k11/get-hired-server#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "hpp": "^0.2.3",
+    "pg": "^8.16.3",
+    "tslib": "^2.8.1",
+    "ua-parser-js": "^2.0.5",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/hpp": "^0.2.6",
+    "@types/node": "^24.5.2",
+    "@types/pg": "^8.15.5",
+    "dotenv-cli": "^10.0.0",
+    "node-pg-migrate": "^8.0.3",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.9.2"
+  }
+}
