@@ -1,8 +1,8 @@
 
 // src/controllers/user.controller.ts
 import { Request, Response } from 'express';
-import { createUserSchema } from '@log/schemas/auth/signup.schema';
-import * as userService from "@log/services/auth/signup.service";
+import { createUserSchema } from '../../schemas/auth/signup.schema';
+import * as userService from "../../services/auth/signup.service";
 
 export const createUserController = async (req: Request, res: Response) => {
   try {

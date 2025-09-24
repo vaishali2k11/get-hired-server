@@ -1,8 +1,8 @@
 
 // src/services/user.service.ts
 import db from '@log/database';
-import { hashPassword } from '@log/middlewares/auth/password';
-import { IAuthSignUpModel } from '@log/interface/auth/IAuthSignUp.model';
+import { hashPassword } from '../../middlewares/auth/password';
+import { IAuthSignUpModel } from '../../interface/auth/IAuthSignUp.model';
 
 export const createUser = async (userData: Omit<IAuthSignUpModel.User, 'id' | 'created_at' | 'updated_at' | 'password_hash'> & { password: string }) => {
   const password_hash = await hashPassword(userData.password);

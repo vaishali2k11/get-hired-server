@@ -1,7 +1,7 @@
 // src/controllers/auth.controller.ts
 import { Request, Response } from "express";
-import { signInSchema } from "@log/schemas/auth/signin.schema";
-import { signInUser } from "@log/services/auth/signin.service";
+import { signInSchema } from "../../schemas/auth/signin.schema";
+import { signInUser } from "../../services/auth/signin.service";
 
 export const signInController = async (req: Request, res: Response) => {
   try {
