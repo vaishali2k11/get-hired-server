@@ -1,6 +1,6 @@
 
 // src/services/user.service.ts
-import db from '@log/database';
+import db from '../../database';
 import { hashPassword } from '../../middlewares/auth/password';
 import { IAuthSignUpModel } from '../../interface/auth/IAuthSignUp.model';
 

@@ -1,6 +1,6 @@
 
 // src/services/auth.service.ts
-import db from "@log/database";
+import db from "../../database";
 import bcrypt from "bcryptjs";
 import { IAuthSignUpModel } from "../../interface/auth/IAuthSignUp.model";
 
