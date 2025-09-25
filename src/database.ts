@@ -5,14 +5,9 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-console.log(' process.env.DATABASE_USERNAME:',  process.env.DATABASE_USERNAME)
-console.log('process.env.DATABASE_HOST:', process.env.DATABASE_HOST)
+console.log('process.env.DATABASE_URL:', process.env.DATABASE_URL)
 const db = new Pool({
-  user: process.env.DATABASE_USERNAME,
-  host: process.env.DATABASE_HOST,
-  database: process.env.DATABASE_NAME,
-  password: process.env.DATABASE_PASSWORD,
-  port: Number(process.env.DATABASE_PORT) || 5432,
+  connectionString: process.env.DATABASE_URL,
   ssl: { rejectUnauthorized: false }
 });
 
