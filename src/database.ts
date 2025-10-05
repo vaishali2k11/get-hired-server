@@ -11,6 +11,7 @@ const db = new Pool({
   ssl: { rejectUnauthorized: false }
 });
 
+console.log('db:', db)
 export const databaseConnection = () => {
     db.connect()
       .then(() => console.log("✅ Database initialized in server.ts"))

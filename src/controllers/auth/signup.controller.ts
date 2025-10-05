@@ -7,7 +7,7 @@ import * as userService from "../../services/auth/signup.service";
 export const createUserController = async (req: Request, res: Response) => {
   try {
     // 1️⃣ Validate request body
-    console.log('req.body:', req.body)
+    console.log('req.body1:', req.body)
     const parsed = createUserSchema.safeParse(req.body);
     console.log('parsed:', parsed)
     if (!parsed.success) {
